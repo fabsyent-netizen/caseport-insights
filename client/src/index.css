@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Google Fonts for CasePort brand */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -43,82 +46,103 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  /* CasePort Brand Colors */
+  --caseport-navy: #0A0E17;
+  --caseport-cyan: #22D3EE;
+  --caseport-gold: #F59E0B;
+  --caseport-green: #10B981;
+  --caseport-text-primary: #F1F3F5;
+  --caseport-text-secondary: #B0B8C4;
+  --caseport-text-muted: #6B7280;
+  
+  /* Semantic Colors */
+  --primary: var(--caseport-cyan);
+  --primary-foreground: var(--caseport-navy);
+  --sidebar-primary: var(--caseport-cyan);
+  --sidebar-primary-foreground: var(--caseport-navy);
+  --chart-1: var(--caseport-cyan);
+  --chart-2: var(--caseport-gold);
+  --chart-3: var(--caseport-cyan);
+  --chart-4: var(--caseport-gold);
+  --chart-5: var(--caseport-green);
   --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --background: var(--caseport-navy);
+  --foreground: var(--caseport-text-primary);
+  --card: rgba(255, 255, 255, 0.03);
+  --card-foreground: var(--caseport-text-primary);
+  --popover: rgba(255, 255, 255, 0.05);
+  --popover-foreground: var(--caseport-text-primary);
+  --secondary: var(--caseport-cyan);
+  --secondary-foreground: var(--caseport-navy);
+  --muted: var(--caseport-text-muted);
+  --muted-foreground: var(--caseport-text-secondary);
+  --accent: var(--caseport-cyan);
+  --accent-foreground: var(--caseport-navy);
+  --destructive: #EF4444;
+  --destructive-foreground: var(--caseport-text-primary);
+  --border: rgba(255, 255, 255, 0.06);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: var(--caseport-cyan);
+  --sidebar: var(--caseport-navy);
+  --sidebar-foreground: var(--caseport-text-primary);
+  --sidebar-accent: var(--caseport-cyan);
+  --sidebar-accent-foreground: var(--caseport-navy);
+  --sidebar-border: rgba(255, 255, 255, 0.06);
+  --sidebar-ring: var(--caseport-cyan);
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  /* Dark mode uses same CasePort colors */
+  --primary: var(--caseport-cyan);
+  --primary-foreground: var(--caseport-navy);
+  --sidebar-primary: var(--caseport-cyan);
+  --sidebar-primary-foreground: var(--caseport-navy);
+  --background: var(--caseport-navy);
+  --foreground: var(--caseport-text-primary);
+  --card: rgba(255, 255, 255, 0.03);
+  --card-foreground: var(--caseport-text-primary);
+  --popover: rgba(255, 255, 255, 0.05);
+  --popover-foreground: var(--caseport-text-primary);
+  --secondary: var(--caseport-cyan);
+  --secondary-foreground: var(--caseport-navy);
+  --muted: var(--caseport-text-muted);
+  --muted-foreground: var(--caseport-text-secondary);
+  --accent: var(--caseport-cyan);
+  --accent-foreground: var(--caseport-navy);
+  --destructive: #EF4444;
+  --destructive-foreground: var(--caseport-text-primary);
+  --border: rgba(255, 255, 255, 0.06);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: var(--caseport-cyan);
+  --chart-1: var(--caseport-cyan);
+  --chart-2: var(--caseport-gold);
+  --chart-3: var(--caseport-cyan);
+  --chart-4: var(--caseport-gold);
+  --chart-5: var(--caseport-green);
+  --sidebar: var(--caseport-navy);
+  --sidebar-foreground: var(--caseport-text-primary);
+  --sidebar-accent: var(--caseport-cyan);
+  --sidebar-accent-foreground: var(--caseport-navy);
+  --sidebar-border: rgba(255, 255, 255, 0.06);
+  --sidebar-ring: var(--caseport-cyan);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    font-family: 'Geist', system-ui, -apple-system, sans-serif;
+  }
   body {
     @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Geist', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+  }
+  code, pre, .mono {
+    font-family: 'JetBrains Mono', monospace;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
